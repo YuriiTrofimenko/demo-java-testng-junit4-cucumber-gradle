@@ -56,11 +56,11 @@ public class SumVerifyTest {
             Assert.assertTrue(cartTotalPrice.value < expectedOrderPriceTotalMaxBound);
         }
 
-    @Test(dataProvider = "products")
+    /* @Test(dataProvider = "products")
     public void givenFilter_whenProductsPageSearch_thenSuccess (RozetkaFilter rozetkaFilter) throws InterruptedException {
         domManipulatorFacade.filterProductsByCategory(rozetkaFilter.getProductGroup())
             .filterProductsByCategory(rozetkaFilter.getProductGroup());
-    }
+    } */
 
         @AfterMethod
         public void tearDown() {
