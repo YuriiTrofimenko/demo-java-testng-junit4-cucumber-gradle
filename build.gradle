@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'org.demo'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '3.0.0'
+    implementation group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '3.0.0'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.3.1'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.4'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.4'
+    implementation group: 'org.testng', name: 'testng', version: '6.14.3'
+    implementation group: 'junit', name: 'junit', version: '4.12'
+}
+
+def testng = project.hasProperty('testng')
+
+test {
+    if(testng) {
+        exclude 'runner/**'
+        useTestNG() {
+            dependsOn cleanTest
+            useDefaultListeners = true
+            suites 'src/main/resources/TestNGFilesFolder/testng.xml'
+        }
+    } else {
+        exclude 'labTest/**'
+    }
+}

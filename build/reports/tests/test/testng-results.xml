@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-09-10T10:43:41Z" name="RozetkaSuite" finished-at="2021-09-10T10:45:08Z" duration-ms="86713">
+    <groups>
+    </groups>
+    <test started-at="2021-09-10T10:43:41Z" name="testSuiteRozetka" finished-at="2021-09-10T10:45:08Z" duration-ms="86713">
+      <class name="labTest.SumVerifyTest">
+        <test-method is-config="true" signature="appSetup()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:43:41Z" name="appSetup" finished-at="2021-09-10T10:43:41Z" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appSetup -->
+        <test-method is-config="true" signature="testsSetUp()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:43:41Z" name="testsSetUp" finished-at="2021-09-10T10:43:46Z" duration-ms="5017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method is-config="true" signature="testsSetUp()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:43:41Z" name="testsSetUp" finished-at="2021-09-10T10:43:46Z" duration-ms="5270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method is-config="true" signature="testsSetUp()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:43:41Z" name="testsSetUp" finished-at="2021-09-10T10:43:46Z" duration-ms="4880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method is-config="true" signature="testsSetUp()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:43:41Z" name="testsSetUp" finished-at="2021-09-10T10:43:46Z" duration-ms="4987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method signature="givenFilter_whenProductsPageSearch_thenSuccess(model.RozetkaFilter)[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:43:46Z" name="givenFilter_whenProductsPageSearch_thenSuccess" data-provider="products" finished-at="2021-09-10T10:44:03Z" duration-ms="17481" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[model.RozetkaFilter@ce14e32]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenFilter_whenProductsPageSearch_thenSuccess -->
+        <test-method signature="givenFilter_whenProductsPageSearch_thenSuccess(model.RozetkaFilter)[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:43:46Z" name="givenFilter_whenProductsPageSearch_thenSuccess" data-provider="products" finished-at="2021-09-10T10:44:04Z" duration-ms="17887" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[model.RozetkaFilter@9f79d55]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenFilter_whenProductsPageSearch_thenSuccess -->
+        <test-method signature="givenFilter_whenProductsPageSearch_thenSuccess(model.RozetkaFilter)[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:43:46Z" name="givenFilter_whenProductsPageSearch_thenSuccess" data-provider="products" finished-at="2021-09-10T10:44:04Z" duration-ms="17559" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[model.RozetkaFilter@708c3e42]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenFilter_whenProductsPageSearch_thenSuccess -->
+        <test-method signature="givenFilter_whenProductsPageSearch_thenSuccess(model.RozetkaFilter)[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:43:46Z" name="givenFilter_whenProductsPageSearch_thenSuccess" data-provider="products" finished-at="2021-09-10T10:44:04Z" duration-ms="17836" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[model.RozetkaFilter@636bdfff]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenFilter_whenProductsPageSearch_thenSuccess -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:03Z" name="tearDown" finished-at="2021-09-10T10:44:04Z" duration-ms="519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:04Z" name="tearDown" finished-at="2021-09-10T10:44:04Z" duration-ms="289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:04Z" name="tearDown" finished-at="2021-09-10T10:44:04Z" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:04Z" name="tearDown" finished-at="2021-09-10T10:44:04Z" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="testsSetUp()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:05Z" name="testsSetUp" finished-at="2021-09-10T10:44:09Z" duration-ms="4514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method is-config="true" signature="testsSetUp()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:05Z" name="testsSetUp" finished-at="2021-09-10T10:44:09Z" duration-ms="4357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method is-config="true" signature="testsSetUp()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:05Z" name="testsSetUp" finished-at="2021-09-10T10:44:09Z" duration-ms="4508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method is-config="true" signature="testsSetUp()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:05Z" name="testsSetUp" finished-at="2021-09-10T10:44:09Z" duration-ms="4076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method signature="givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound(model.RozetkaFilter)[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:09Z" name="givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound" data-provider="products" finished-at="2021-09-10T10:45:08Z" duration-ms="59016" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[model.RozetkaFilter@4e5ccaea]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound -->
+        <test-method signature="givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound(model.RozetkaFilter)[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:09Z" name="givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound" data-provider="products" finished-at="2021-09-10T10:45:07Z" duration-ms="58423" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[model.RozetkaFilter@2128af1f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound -->
+        <test-method signature="givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound(model.RozetkaFilter)[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:09Z" name="givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound" data-provider="products" finished-at="2021-09-10T10:45:06Z" duration-ms="56548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[model.RozetkaFilter@408ecc14]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound -->
+        <test-method signature="givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound(model.RozetkaFilter)[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:09Z" name="givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound" data-provider="products" finished-at="2021-09-10T10:44:53Z" duration-ms="44290" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[model.RozetkaFilter@4e623920]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:44:53Z" name="tearDown" finished-at="2021-09-10T10:44:53Z" duration-ms="76" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:45:06Z" name="tearDown" finished-at="2021-09-10T10:45:06Z" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:45:07Z" name="tearDown" finished-at="2021-09-10T10:45:07Z" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:labTest.SumVerifyTest@6ead6255]" started-at="2021-09-10T10:45:08Z" name="tearDown" finished-at="2021-09-10T10:45:08Z" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- labTest.SumVerifyTest -->
+    </test> <!-- testSuiteRozetka -->
+  </suite> <!-- RozetkaSuite -->
+</testng-results>
