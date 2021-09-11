@@ -9,12 +9,27 @@ import java.util.List;
 
 public class AbstractElement implements WebElement {
 
+    private final static Integer MAX_ATTEMPTS_COUNT = 3;
+    private final static ThreadLocal<Integer> attemptsCount = new ThreadLocal<>();
     protected WebDriver driver;
     protected WebElement element;
 
     public AbstractElement(WebDriver driver, WebElement element) {
         this.driver = driver;
         this.element = element;
+    }
+
+    private static Boolean canNextAttempt() {
+        if (AbstractElement.attemptsCount.get() == null) {
+            AbstractElement.attemptsCount.set(0);
+        }
+        if (AbstractElement.attemptsCount.get() < AbstractElement.MAX_ATTEMPTS_COUNT) {
+            AbstractElement.attemptsCount.set(AbstractElement.attemptsCount.get() + 1);
+            return true;
+        } else {
+            AbstractElement.attemptsCount.set(0);
+            return false;
+        }
     }
 
     public static void performAndWaitForUpdate(
@@ -58,10 +73,12 @@ public class AbstractElement implements WebElement {
         try {
             actionToPerform.run();
         } catch (ElementClickInterceptedException | StaleElementReferenceException ignored) {
-            new WebDriverWait(driver, timeOutInSeconds)
-                .until(ExpectedConditions.refreshed(
-                    ExpectedConditions.elementToBeClickable(element)));
-            actionToPerform.run();
+            if (AbstractElement.canNextAttempt()) {
+                new WebDriverWait(driver, timeOutInSeconds)
+                    .until(ExpectedConditions.refreshed(
+                        ExpectedConditions.elementToBeClickable(element)));
+                safeAction(actionToPerform, timeOutInSeconds);
+            }
         }
     }
 

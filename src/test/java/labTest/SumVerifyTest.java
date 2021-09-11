@@ -53,6 +53,7 @@ public class SumVerifyTest {
                 .getCartTotalPrice(cartTotalPrice);
             int expectedOrderPriceTotalMaxBound = rozetkaFilter.getSum();
             Assert.assertEquals(productTitleFromCart.value, productTitleFromProduct.value);
+            System.out.printf("%s < %s", cartTotalPrice.value, expectedOrderPriceTotalMaxBound);
             Assert.assertTrue(cartTotalPrice.value < expectedOrderPriceTotalMaxBound);
         }
 

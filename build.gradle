@@ -5,6 +5,9 @@ plugins {
 group 'org.demo'
 version '1.0-SNAPSHOT'
 
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
 repositories {
     mavenCentral()
 }
@@ -23,6 +26,7 @@ dependencies {
 def testng = project.hasProperty('testng')
 
 test {
+    systemProperty "file.encoding", "utf-8"
     if(testng) {
         exclude 'runner/**'
         useTestNG() {
