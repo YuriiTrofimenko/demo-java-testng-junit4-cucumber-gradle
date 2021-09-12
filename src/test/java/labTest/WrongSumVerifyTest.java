@@ -10,7 +10,9 @@ import util.XMLtoObject;
 
 import java.util.List;
 
-public class SumVerifyTest {
+public class WrongSumVerifyTest {
+
+        private static final int WRONG_EXPECTED_ORDER_PRICE_TOTAL_MAX_BOUND = 100;
 
         private Facade domManipulatorFacade;
 
@@ -51,10 +53,9 @@ public class SumVerifyTest {
                 .addProductToCart()
                 .getProductTitleFromCart(productTitleFromCart)
                 .getCartTotalPrice(cartTotalPrice);
-            int expectedOrderPriceTotalMaxBound = rozetkaFilter.getSum();
             Assert.assertEquals(productTitleFromCart.value, productTitleFromProduct.value);
-            // System.out.printf("%s < %s", cartTotalPrice.value, expectedOrderPriceTotalMaxBound);
-            Assert.assertTrue(cartTotalPrice.value < expectedOrderPriceTotalMaxBound);
+            // System.out.printf("%s < %s", cartTotalPrice.value, WRONG_EXPECTED_ORDER_PRICE_TOTAL_MAX_BOUND);
+            Assert.assertTrue(cartTotalPrice.value < WRONG_EXPECTED_ORDER_PRICE_TOTAL_MAX_BOUND);
         }
 
     /* @Test(dataProvider = "products")

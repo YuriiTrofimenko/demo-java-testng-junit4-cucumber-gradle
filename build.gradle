@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'maven'
+    id 'maven-publish'
 }
 
 group 'org.demo'
@@ -9,6 +11,7 @@ compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -20,6 +23,13 @@ dependencies {
     implementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.4'
     implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.4'
     implementation group: 'org.testng', name: 'testng', version: '6.14.3'
+    implementation ('org.uncommons:reportng:1.1.4') {
+        exclude group: 'org.testng', module: 'testng'
+    }
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.14.0'
+    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
+    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.14.1'
+    implementation group: 'com.google.inject', name: 'guice', version: '5.0.1'
     implementation group: 'junit', name: 'junit', version: '4.12'
 }
 
@@ -31,8 +41,15 @@ test {
         exclude 'runner/**'
         useTestNG() {
             dependsOn cleanTest
-            useDefaultListeners = true
+            useDefaultListeners = false
             suites 'src/main/resources/TestNGFilesFolder/testng.xml'
+            options {
+                listeners << 'org.uncommons.reportng.HTMLReporter'
+                listeners << 'org.uncommons.reportng.JUnitXMLReporter'
+            }
+            testLogging {
+                events = ['PASSED', 'FAILED', 'SKIPPED']
+            }
         }
     } else {
         exclude 'labTest/**'

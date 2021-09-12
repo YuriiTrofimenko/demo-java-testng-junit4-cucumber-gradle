@@ -21,7 +21,7 @@ public class BaseSearchablePage extends AbstractPage {
     }
 
     public ProductsPage selectSearchSuggestItem (final String keyword) {
-        System.out.printf("Selector: %s", String.format("//div[contains(@class, 'search-suggest')]//p[contains(@class, 'search-suggest__heading') and text()[normalize-space(.)='Перейти в категорию']]/following-sibling::ul//a[contains(@class, 'search-suggest__item-text') and text()[normalize-space(.)='%s']]", keyword));
+        // System.out.printf("Selector: %s", String.format("//div[contains(@class, 'search-suggest')]//p[contains(@class, 'search-suggest__heading') and text()[normalize-space(.)='Перейти в категорию']]/following-sibling::ul//a[contains(@class, 'search-suggest__item-text') and text()[normalize-space(.)='%s']]", keyword));
         Button searchSuggestItemElement =
             new Button(
                 driver,
