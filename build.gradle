@@ -42,7 +42,7 @@ test {
         exclude 'runner/**'
         useTestNG() {
             dependsOn cleanTest
-            useDefaultListeners = false
+            useDefaultListeners = true
             suites 'src/main/resources/TestNGFilesFolder/testng.xml'
             options {
                 listeners << 'org.uncommons.reportng.HTMLReporter'
