@@ -1,9 +1,9 @@
 package testlisteners;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.log4testng.Logger;
 
 public class TestNGListener implements ITestListener {
 
