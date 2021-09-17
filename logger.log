@@ -14,3 +14,11 @@
 [02:00:28 INFO] 
 [02:01:10 INFO] Failed because of - java.lang.AssertionError: expected [true] but found [false]
 [02:01:10 INFO] =========== onFinish :-testSuiteRozetka===============
+[10:34:30 INFO] =========== onStart :-testSuiteRozetka===============
+[10:34:34 INFO] givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound Started
+[10:34:34 INFO] 
+[10:35:15 INFO] givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound Passed
+[10:35:18 INFO] givenFilter_whenTheMostExpensiveProductAddedToCart_thenTotalPriceLessThanBound Started
+[10:35:18 INFO] 
+[10:36:01 INFO] Failed because of - java.lang.AssertionError: expected [true] but found [false]
+[10:36:01 INFO] =========== onFinish :-testSuiteRozetka===============

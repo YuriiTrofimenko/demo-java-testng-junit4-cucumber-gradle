@@ -1,7 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'io.qameta.allure:allure-gradle:2.8.1'
+    }
+}
+
 plugins {
     id 'java'
     id 'maven'
     id 'maven-publish'
+    id 'io.qameta.allure' version '2.8.1'
+}
+
+allure {
+    version = '2.10.0'
+    downloadLink = 'https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.10.0/allure-commandline-2.10.0.zip'
+    autoconfigure = true
+    allureJavaVersion = '2.13.7'
+    aspectjVersion = '1.9.2'
+    configuration = 'compile'
 }
 
 group 'org.demo'
@@ -11,6 +31,7 @@ compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
 repositories {
+    jcenter()
     mavenLocal()
     mavenCentral()
 }
@@ -27,7 +48,8 @@ dependencies {
         exclude group: 'org.testng', module: 'testng'
     }
     implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.14.0'
-    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
+    implementation 'org.aspectj:aspectjrt:1.9.2'
+    // implementation group: 'log4j', name: 'log4j', version: '1.2.17'
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.1'
     implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.14.1'
     implementation group: 'com.google.inject', name: 'guice', version: '5.0.1'
@@ -35,7 +57,9 @@ dependencies {
 }
 
 def testng = project.hasProperty('testng')
-
+/* test.doFirst {
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+} */
 test {
     systemProperty "file.encoding", "utf-8"
     if(testng) {
@@ -55,4 +79,7 @@ test {
     } else {
         exclude 'labTest/**'
     }
+    ignoreFailures = true
 }
+
+gradle.startParameter.continueOnFailure = true
