@@ -10,7 +10,7 @@ buildscript {
 
 plugins {
     id 'java'
-    id 'maven'
+    // id 'maven'
     id 'maven-publish'
     id 'io.qameta.allure' version '2.8.1'
 }
@@ -21,7 +21,7 @@ allure {
     autoconfigure = true
     allureJavaVersion = '2.13.7'
     aspectjVersion = '1.9.2'
-    configuration = 'compile'
+    configuration = 'implementation'
 }
 
 group 'org.demo'
